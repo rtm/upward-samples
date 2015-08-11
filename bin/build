@@ -1,0 +1,2 @@
+echo Recompiling javascript in sam.
+browserify --transform babelify --debug --outfile dist/bundle.js src/main.js

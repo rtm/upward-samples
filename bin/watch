@@ -1,0 +1,5 @@
+# bin/watch
+# set up watcher for samples
+
+# TODO: make this relative
+watchman -- trigger ~/repos/rtm/upward upward-samples index.html 'src/*.js' 'node_modules/upward/src/*.js' -- bash bin/build

@@ -5,4 +5,4 @@ node_modules
 npm-debug.log
 
 # omit build artifacts
-dist/
+bundle.js

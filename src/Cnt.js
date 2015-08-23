@@ -1,7 +1,7 @@
 // sam/Cnt.js
 // Sample for counting up.
 
-import {UpCount, T} from 'upward/src/Up';
+import {UpCount, T} from 'upward';
 
 var dom;
 

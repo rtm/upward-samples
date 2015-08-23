@@ -1,5 +1,10 @@
-import {U, UpStyle} from 'upward/src/Up';
+// Styling for samples.
+// ====================
+
+import {U, UpStyle} from 'upward';
+
 var {assign, keys} = Object;
+
 
 var theme = U({
 });

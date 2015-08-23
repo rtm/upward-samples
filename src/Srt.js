@@ -1,7 +1,7 @@
 // sam/Srt.js
 // Sample for sorting.
 
-import {U, T, E} from 'upward/src/Up';
+import {U, T, E} from 'upward';
 
 var dom, arr;
 

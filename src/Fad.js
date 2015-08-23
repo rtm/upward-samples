@@ -3,8 +3,7 @@
 // Sample for fading
 
 
-import {E, U, T} from 'upward/src/Up';
-import FADE      from 'upward/src/Fad';
+import {E, U, T, FADE} from 'upward';
 
 var dom;
 

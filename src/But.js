@@ -3,7 +3,7 @@
 // Upward sample for button.
 
 
-import {U, E, T} from 'upward/src/Up';
+import {U, E, T} from 'upward';
 var dom, config;
 
 

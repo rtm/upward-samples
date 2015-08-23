@@ -3,7 +3,7 @@
 // Upward sample for CSS styling.
 
 
-import {E, U, T} from 'upward/src/Up';
+import {E, U, T} from 'upward';
 var dom;
 
 

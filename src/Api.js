@@ -1,4 +1,4 @@
-import {U, T, C, F} from 'upward/src/Up';
+import {U, T, C, F} from 'upward';
 import {fetchJson} from 'upward/src/Fet';
 
 var get, dom, data;

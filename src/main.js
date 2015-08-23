@@ -2,24 +2,30 @@
 //
 // Main file for upward samples.
 
-import markdown from '../node_modules/markdown/lib/markdown';
+import {E} from 'upward';
 
 
+// Markdown is used to format the description of each sample.
+import markdown from 'markdown/lib/markdown';
+
+
+// Styling for sample page.
 import './style';
 
-import cntSample from './Cnt';
-import tmpSample from './Tem';
-import funSample from './Fun';
-import butSample from './But';
-import apiSample from './Api';
-import mapSample from './Map';
-import srtSample from './Srt';
-import cssSample from './Css';
-import fadSample from './Fad';
+
+//import cntSample from './Cnt';
+//import tmpSample from './Tem';
+//import funSample from './Fun';
+//import butSample from './But';
+//import apiSample from './Api';
+//import mapSample from './Map';
+//import srtSample from './Srt';
+//import cssSample from './Css';
+//import fadSample from './Fad';
 import ranSample from './Ran';
 
 var samples = [
-//  { sample: cntSample, js: 'Cnt' },
+//  { sample: cntSample, js: 'Cnt', desc: "Counting" },
 //  { sample: tmpSample, js: 'Tem' },
 //  { sample: funSample, js: 'Fun' },
 //  { sample: butSample, js: 'But' },
@@ -28,7 +34,7 @@ var samples = [
 //  { sample: srtSample, js: 'Srt' },
 //  { sample: cssSample, js: 'Css' },
 //  { sample: fadSample, js: 'Fad' },
-  { sample: ranSample, js: 'Ran' }
+  { sample: ranSample, js: 'Ran', desc: "Slider" }
 ];
 
 var div = document.getElementById('samples');
@@ -85,5 +91,15 @@ function go() {
   samples.forEach(oneSample);
 }
 
+div.appendChild(E('div') . has([
+  "Samples: ",
+
+  E('span') . has(
+    samples . as(
+      sample =>
+        E('A') . is({ href: `#${sample.js}` }) . has(sample.desc, ' ')
+    )
+  )
+]));
 
 go();

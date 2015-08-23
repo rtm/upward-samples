@@ -1,1 +1,0 @@
-python -m SimpleHTTPServer 8081 > /dev/null 2>&1

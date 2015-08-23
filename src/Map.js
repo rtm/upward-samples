@@ -2,7 +2,7 @@
 // Sample for mapping.
 
 
-import {U, T, E} from 'upward/src/Up';
+import {U, T, E} from 'upward';
 
 var dom, arr;
 

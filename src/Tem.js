@@ -1,4 +1,4 @@
-import {T, F, UpCount} from 'upward/src/Up';
+import {T, F, UpCount} from 'upward';
 var dom;
 
 /// ### Templating

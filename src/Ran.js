@@ -3,7 +3,7 @@
 // Sample for range-type input elemnet.
 
 
-import {E, U, T, F, V} from 'upward/src/Up';
+import {E, U, T, F, V} from 'upward';
 
 var dom;
 
@@ -11,7 +11,7 @@ var dom;
 /// ### Sliders
 ///
 /// A slider is just an `input` element with type `range`.
-/// The `true` parameter to `.sets` causes the value to be updated in real time.
+/// `.setsImmediate` works like `.sets` but reacts in real time to any changes.
 /// The `V` sets up a single upwardable value.
 /// Here, we tie the slider value to font size.
 
@@ -19,14 +19,18 @@ var dom;
 //===START
 var size = V(12);
 var style = { fontSize: F`${size}pt` };
-setTimeout(() => { console.log(style); console.log(style.fontSize); }, 1000);
+var SLIDER = { type: 'range', min: 6, max: 48, value: 12 };
 
 dom = E('div') . has([
-  E('span') . has("Sample text") . is(U({ style })),
+  E('span')
+    . has("Sample text")
+    . is(U({ style }))
+  ,
 
-  E('input') .
-    is({ type: 'range', min: 6, max: 48, value: 12 }) .
-    sets(size, true),
+  E('input')
+    . is(SLIDER)
+    . setsImmediate(size)
+  ,
 
   F`Size: ${style.fontSize}`
 ]);

@@ -1,4 +1,4 @@
-import {C, T, UpCount} from 'upward/src/Up';
+import {C, T, UpCount} from 'upward';
 var dom;
 
 /// ### Functions
